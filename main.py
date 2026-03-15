@@ -15,11 +15,13 @@ app = FastAPI(title="Portfolio Chat API")
 # This allows your portfolio frontend to call this API
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        "http://127.0.0.1:5500",
-        "http://localhost:5500",
-        "https://rakeshvemula-dev.github.io/portfolio/",  # your live portfolio
-    ],
+   allow_origins=[
+    "http://127.0.0.1:5500",
+    "http://localhost:5500",
+    "https://rakeshvemula-dev.github.io",
+    "https://rakeshvemula-dev.github.io/portfolio",
+    "https://rakeshvemula-dev.github.io/portfolio/",
+],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
